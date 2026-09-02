@@ -56,6 +56,7 @@ I wanted to build something cool because Eous is funny as hell
   - Main Body Width: `303mm`
   - Height (feet to head): `515mm`
   - Height (feet to ear tip): `660mm`
+- `eous_klef.zip` contains the STEP files if you believe
 ### Core Design Considerations
 The structure's design was done this way in consideration with the following:
 #### Screen! and Head
