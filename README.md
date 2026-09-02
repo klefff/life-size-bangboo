@@ -1,15 +1,25 @@
 # Eous Build Log
 en-nah (have a seat and let me tell you a story)
 
+<p align="center">
+  <img height="300" src="/resources/title_gif.gif">
+</p>
+
 ### Disclaimers
-- The content below is a log of the build process of a life-sized version of the Bangboo: Eous from the game Zenless Zone Zero.
+- The content below is a log of the build process of a life-sized version of the Bangboo: Eous from the game [Zenless Zone Zero](https://zenless.hoyoverse.com/en-us/main).
 - Character design belongs to miHoYo
 - This repo does not serve as a complete build guide, but more as a base and general direction, in which you, the reader, may also build one! (mainly because the way I built it is jank as heck)
 - All content is provided as-is, use at own risk
 
 ## Concept and Features
 > Because its cute
+
 I wanted to build something cool because Eous is funny as hell
+
+<p align="center">
+  <img height="200" src="https://media.tenor.com/3e98ZMyTMGAAAAAM/bangboo-zenless.gif">
+</p>
+
 ### Features
 - Display for face expressions (most of them are rendered live on device, minimal pre-drawn animations)
 - Articulating ears and arms for expressions
@@ -29,8 +39,17 @@ I wanted to build something cool because Eous is funny as hell
 - 1x ESP32 LED Matrix Driver Board from [Waveshare](https://www.waveshare.com/product/esp32-related/esp32-s3-rgb-matrix.htm)
 - 1x ESP32 for servo control
 - 1x Deconstructed Jetbot with nVidia Jetson Nano (4GB) for wireless connectivity and power (this is REALLY overkill)
- 
+
+<p align="center">
+  <img height="300" src="/resources/banner.PNG">
+</p>
+
 ## Structure Design
+
+<p align="center">
+  <img height="300" src="/resources/st_1.PNG">
+</p>
+
 - I found a model I liked on the internet, I think it was [this one](https://makerworld.com/en/models/595629-zenless-zone-zero-bangboo-eous-jue-qu-ling-yi-ai-s#profileId-816838).
   - Using `insert CAD/3D modelling software`, I scaled it to an appropriate size and designed around it
 - The overall dimensions are:
@@ -40,6 +59,15 @@ I wanted to build something cool because Eous is funny as hell
 ### Core Design Considerations
 The structure's design was done this way in consideration with the following:
 #### Screen! and Head
+
+<p align="center">
+  <img height="300" src="/resources/st_2.PNG">
+</p>
+
+<p align="center">
+  <img height="300" src="/resources/st_3.PNG">
+</p>
+
 - A flexible LED screen was used to simulate a nice curve over Eous' face (I think I over-flexed the screen, the Red and Blue channels in a corner is not working well anymore)
 - The screen is press fitted over the face's fascia with general guides to allow the screen to curve into an acceptable shape
 - A tinted plastic sheet is placed over the screen to hide any gaps, plus to soften the LEDs
@@ -49,14 +77,38 @@ The structure's design was done this way in consideration with the following:
   - The ears: To reduce fatigue as they will move a lot
   - The base of the head: So that I can make the head be tool-lessly removed (twist lock)
 #### Ears
+
+<p align="center">
+  <img height="300" src="/resources/st_4.PNG">
+</p>
+
+<p align="center">
+  <img height="300" src="/resources/st_8.PNG">
+</p>
+
 - The ears come in 3 major pieces, each piece linked by a hinged system
 - A hard, flexible wire (I used 0.9mm MIG welding wire) can be thread through the pieces so that when you push/pull on it, the ears will flex
 #### Main Body
+
+<p align="center">
+  <img height="300" src="/resources/st_10.PNG">
+</p>
+
 - Mainly designed to hold the articulating arms
 - The arms articulate with a offsetted gear
 - The ends of the arms are formed around the 3D model's shape
 - The clamping system for the head is also directly attached to the main body
+
+<p align="center">
+  <img height="300" src="/resources/st_6.PNG">
+</p>
+
 #### Legs and Lower Body
+
+<p align="center">
+  <img height="300" src="/resources/sl_11.PNG">
+</p>
+
 - This was fairly straightforward
 - As with the head, the shell was divided into pieces to fit in my printer
 - The lower body directly attaches to the main body
@@ -65,12 +117,28 @@ The structure's design was done this way in consideration with the following:
 - Everything is held together with bolts, glue and tears.
 
 ## Clothing
+
+<p align="center">
+  <img height="300" src="/resources/st_5.PNG">
+</p>
+
 - I used screenshots and images online to try and get everything as lore-accurate as possible
 - I've never properly sewed, or used a sewing machine before so everything was just yoloed, I have no idea what anything was I just brute forced it
+
+<p align="center">
+  <img height="150" src="/resources/evil.PNG">
+</p>
+
 ### Head and Legs
 - A flexible white polyester fleece layer was first glued over the assembled shell to make the base more consistent and to stop any of the shell colours bleed through to the actual clothing layer
 - The clothing layer was the same material, 'stretched' over the assembled shell and help down with pins and 3D printed clamps
 ### Ears
+
+
+<p align="center">
+  <img height="300" src="/resources/cl_1.PNG">
+</p>
+
 - The ears were separately made and slid over the 3D printed shell like a sock.
 - They are not directly attached to the head for easier removable and servicing
 - When making, they were sized about 5mm larger to allow for flexing when the ears move.
@@ -87,11 +155,21 @@ The structure's design was done this way in consideration with the following:
 - Everything is attached to the body with strategically placed press studs
 
 ### Scarf
+
+<p align="center">
+  <img height="300" src="/resources/cl_2.PNG">
+</p>
+
 - This was straightforward, I modelled the shape based on pictures and what looked good
 - Once satisfied the shape was cut and the edges sewed
 - I used white vinyl heat transfer paper to add the decals with an iron
 
 ## Electronics and Interactivity
+
+<p align="center">
+  <img height="300" src="/resources/el_1.PNG">
+</p>
+
 - I was running out of time so all of this is a bit scuffed but:
 ### Basic Concept, TLDR
 - Everything is powered by battery so no wires to Eous is required
@@ -116,12 +194,59 @@ Realistically everything could have been done on a single ESP32, but I was lazy 
   - Wave mode: One arm will wave and a happy expression appears
   - Praise the sun: Eous' eyes trip out and the pose is made
   - Sleep mode: Eous will look like they are sleeping
+ 
+<p align="center">
+  <img height="150" src="/resources/title_gif.gif">
+</p>
+
+<p align="center">
+  <img height="150" src="/resources/wave_gif.gif">
+</p>
+
+<p align="center">
+  <img height="150" src="/resources/tuck_gif.gif">
+</p>
+
+#### Removable Head
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+<p align="center">
+  <img height="300" src="/resources/sl-7.PNG">
+</p>
+
+<p align="center">
+  <img height="300" src="/resources/aaaa_gif.gif">
+</p>
+
+#### Articulating Ears and Arms
+
+<p align="center">
+  <img height="300" src="/resources/el_2.PNG">
+</p>
+
+- Ears are driven by a servo linked to a single semi-flexible wire through the ear sections
+  - Push = ears open
+  - Pull = ears close
+
 #### Battery Life?
 - Seemed to be about 2.5 hours with 3x 3.7V 3400mAh LiPo cells in 3S config.
+
+#### Code Usage
+IF YOU REALLY BELIEVE, I included the code. Pinouts can be found in the code
+- Run code in the `/src` folder as such:
+  - `eousWebHost.py, ina219.py`: Place on Jetson or RPi and run as a service (`ina219.py` is the battery i2c)
+  - `eous_mainboard`: Run on the Matrix ESP32
+  - `eous_subboard`: Run on the Servo ESP32
+- WARNING! All boards must be externally supplied with at least 5VDC 4A 
 
 ## Takeaways and Future Plans
 - This was a very cool project, I learned a lot of things
 - I don't ever want to see a sewing machine again
+
+<p align="center">
+  <img height="300" src="/resources/pain.PNG">
+</p>
+
 - I want to take it everywhere and add a ton of new features
 ### Plans and Future Work
 - I want to add auto gaze tracking! The Jetson Nano on it is underutilised, I want to slap a camera on it so it can track and interactively play games with people
