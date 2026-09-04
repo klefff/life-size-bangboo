@@ -148,6 +148,10 @@ The structure's design was done this way in consideration with the following:
 ### Body
 > I hate sleeves
 
+<p align="center">
+  <img height="300" src="/resources/cl_3.PNG">
+</p>
+
 - The jacket for the body used non-stretchy polyester suit jacket material
 - The actual jacket is 2 pieces and rectangular so that was pretty straightforward
 - There is a fleece backing underneath to add bulk
